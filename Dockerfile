@@ -11,4 +11,8 @@ RUN apt-get update -y && \
 
 
 WORKDIR /hexo
-ENTRYPOINT ["/bin/bash"]
+COPY entrypoint.sh /
+ENV USER hwchiu
+ENV EMAIL hwchiu@linkernetworks.com
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/bin/bash"]
