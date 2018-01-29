@@ -9,8 +9,6 @@ RUN apt-get update -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-
-WORKDIR /hexo
 COPY entrypoint.sh /
 ENV USER hwchiu
 ENV EMAIL hwchiu@linkernetworks.com
